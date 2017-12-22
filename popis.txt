@@ -1,0 +1,23 @@
+Ideální body opt. pro RMSE: [584, 15, 10754, 2000]
+Ideální váhy opt. pro RMSE: [2, 6, 3, 4]
+RMSE: 0,0214214902126609
+
+Ideální body pro TOP10: [444, 18, 11045, 2000]
+Ideální váhy pro TOP10: [4, 5, 9, 3]
+TOP10: 10 z 10
+
+Popis algoritmu:
+
+Naprogramoval jsem genetický algoritmus v Ruby.
+genetics.rb 
+------------
+obsahuje kód pro genetický algoritmus - bere minimální a maximální hodnoty pro vektor čísel + ohodnocovací fitness funkci.
+genetický algoritmus se spustí pomocí fce run, která bere jako parametr velikost populace, pravděpodobnost křížení, pravděpodobnost mutace a podmínku pro zastavení evoluce.
+Na základě těchto věcí evolučně selektuje vektor čísel v rozmezí max a min, který má co největší fitness.
+
+Script.rb 
+------------
+obsahuje hlavně načítání dat z csv souboru a naplní s nimi struktury.
+obsahuje také definice ohodnocení a fitness (jak jednotlivých domén, tak celkové položky)
+vydoluje z dat obecné vektory čísel pro genetics.rb
+Je napsán obecně (můžeme přidat/odebrat domény)
